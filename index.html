@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reto</title>
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Importamos el JQUERY -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="deep-purple darken-4">
+            <div class="nav-wrapper">
+                <a href="#!" class="brand-logo"><i class="material-icons">
+                        <img src="/img/7.png" class="circle" width="60" height="60">
+                    </i>Reto</a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="sass.html"><i class="material-icons">search</i></a></li>
+                    <li><a href="badges.html"><i class="material-icons">view_module</i></a></li>
+                    <li><a href="collapsible.html"><i class="material-icons">refresh</i></a></li>
+                    <li><a href="mobile.html"><i class="material-icons">more_vert</i></a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <form id="formid">
+            <div class="section">
+                <div class="row">
+                    <dic class="input-field col s6">
+                        <i class="material-icons prefix">face</i>
+                        <input name="nombre" id="nombre" type="text" class="icon-prefix validate">
+                        <label for="nombre">Nombre Completo</label>
+                    </dic>
+
+                    <div class="input-field col s6">
+                        <select name="imgSelect" id="imgSelect" class="browser-default" onchange="imgSelectF()">
+                            <option value="" disabled selected>Seleccione uno</option>
+                            <option value="1">Familia</option>
+                            <option value="2">Numeros</option>
+                            <option value="3">Letras</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="row">
+                    <div class="col s2">
+                        <label class="checkeable">
+                            <input type="checkbox" name="imagenesSeleccionadas[]" value="1" id="1">
+                            <img src="" class="responsive-img circle" id="a">
+                        </label>
+                    </div>
+                    <div class="col s2">
+                        <label class="checkeable">
+                            <input type="checkbox" name="imagenesSeleccionadas[]" value="2" id="2">
+                            <img src="" class="responsive-img circle" id="b">
+                        </label>
+                    </div>
+                    <div class="col s2">
+                        <label class="checkeable">
+                            <input type="checkbox" name="imagenesSeleccionadas[]" value="3" id="3">
+                            <img src="" class="responsive-img circle" id="c">
+                        </label>
+                    </div>
+                    <div class="col s2">
+                        <label class="checkeable">
+                            <input type="checkbox" name="imagenesSeleccionadas[]" value="4" id="4">
+                            <img src="" class="responsive-img circle" id="d">
+                        </label>
+                    </div>
+                    <div class="col s2">
+                        <label class="checkeable">
+                            <input type="checkbox" name="imagenesSeleccionadas[]" value="5" id="5">
+                            <img src="" class="responsive-img circle" id="e">
+                        </label>
+                    </div>
+                    <div class="col s2">
+                        <label class="checkeable">
+                            <input type="checkbox" name="imagenesSeleccionadas[]" value="6" id="6">
+                            <img src="" class="responsive-img circle" id="f">
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="row center">
+                    <button class="btn waves-effect waves-light" type="button" name="action"
+                        onclick="seleccionar()">aceptar
+                        <i class="material-icons right">send</i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="selection">
+                <div class="row center">
+
+                    <div class="input-field col s6">
+                        <select name="metodoSelect" id="metodoSelect" class="browser-default">
+                            <option value="" disabled selected>Seleccione uno</option>
+                            <option value="1">Burbuja</option>
+                            <option value="2">Selection</option>
+                            <option value="3">Insercion</option>
+                            <option value="4">MergeSort - Mezcla</option>
+                            <option value="5">QuickSort - Rápido</option>
+                            <option value="6">ShellSort</option>
+                        </select>
+                    </div>
+
+                    <div class="input-field col s6">
+                        <p>
+                            <label>
+                                <input type="radio" name="direccion" id="direccion">
+                                <span>Ascendente</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="direccion" id="direccion2">
+                                <span>Descendente</span>
+                            </label>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="row center">
+                    <button class="btn waves-effect waves-light" type="button" name="action" onclick="ordenar()">Ordenar
+                        <i class="material-icons right">send</i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="row" >
+                    <div class="col s2">
+                        <img src="" class="responsive-img circle" id="a1">
+                    </div>
+                    <div class="col s2">
+                        <img src="" class="responsive-img circle" id="a2">
+                    </div>
+                    <div class="col s2">
+                        <img src="" class="responsive-img circle" id="a3">
+                    </div>
+                    <div class="col s2">
+                        <img src="" class="responsive-img circle" id="a4">
+                    </div>
+                    <div class="col s2">
+                        <img src="" class="responsive-img circle" id="a5">
+                    </div>
+                    <div class="col s2">
+                        <img src="" class="responsive-img circle" id="a6">
+                    </div>
+                </div>
+            </div>
+
+        </form>
+    </div>
+    <script src="js/algoritmosOrdenamiento.js"></script>
+
+    <!-- Importanción del javascript del Materialize -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</script>
+
+</html>
